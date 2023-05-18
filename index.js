@@ -258,4 +258,4 @@ app.get("/getAlbums", async (req, res) =>{
 
 });
 
-app.listen(PORT, ()=> console.log('Running Server'));
+app.listen(PORT, ()=> console.log(`Running Server on ${PORT}`));
