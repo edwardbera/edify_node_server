@@ -260,7 +260,7 @@ app.get("/getAlbums", async (req, res) =>{
 
 app.get("/test", async (req, res) =>{
     
-    req.send(uri)
+    res.send(uri)
 });
 
 app.listen(PORT, ()=> console.log(`Running Server on ${PORT}`));
