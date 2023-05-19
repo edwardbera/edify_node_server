@@ -1,4 +1,4 @@
-require('dotenv').config({path:'../../env/config.env'})
+//require('dotenv').config({path:'../../env/config.env'})
 const uri = process.env.MONGODB
 const PORT = process.env.PORT
 const express = require('express');
@@ -256,6 +256,11 @@ app.get("/getAlbums", async (req, res) =>{
         await client.close();
     }
 
+});
+
+app.get("/test", async (req, res) =>{
+    
+    req.send(uri)
 });
 
 app.listen(PORT, ()=> console.log(`Running Server on ${PORT}`));
